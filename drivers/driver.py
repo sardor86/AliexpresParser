@@ -24,4 +24,3 @@ class BaseDriver(webdriver.Chrome):
             return True
         except TimeoutException:
             return False
-
