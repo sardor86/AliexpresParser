@@ -1,12 +1,12 @@
-from drivers import Parser
+from drivers import AliexpressParser
 
 
 def main():
-    category_name = input("Enter category name: ")
-
-    driver = Parser()
+    driver = AliexpressParser()
     driver.get_category()
-    driver.get_products_list(category_name)
+    for category in driver.category:
+        print(f'category: {driver.category[category]}')
+    print(driver.get_products_list('Компьютеры'))
 
 
 if __name__ == '__main__':
